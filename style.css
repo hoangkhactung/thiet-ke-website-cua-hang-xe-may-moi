@@ -1,0 +1,281 @@
+* Reset mặc định */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ============================= Header ============================= */
+header {
+  background: linear-gradient(90deg, white, white);
+  color: rgb(246, 6, 6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+}
+.logo h1 {
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+.user a {
+  color: rgb(247, 4, 4);
+  text-decoration: none;
+  margin-left: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.user a:hover {
+  color: #00ff04;
+}
+
+/* ============================= Banner ============================= */
+.banner {
+  background: url('images/baner.jpg') no-repeat center/cover;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+.banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+}
+.banner-text {
+  position: relative;
+  z-index: 1;
+  animation: fadeIn 2s ease-in-out;
+}
+.banner-text h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+.banner-text p {
+  font-size: 18px;
+  color: #f0f0f0;
+}
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(30px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* ============================= Navigation ============================= */
+nav {
+  background-color: #222;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+nav li {
+  margin: 0 20px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 12px 20px;
+  display: block;
+  transition: all 0.3s;
+}
+nav a:hover,
+nav a.active {
+  background-color: #e60000;
+  border-radius: 5px;
+}
+
+/* ============================= Main & Product Grid ============================= */
+main {
+  text-align: center;
+  padding: 40px 20px;
+}
+main h2 {
+  margin-bottom: 30px;
+  color: #e60000;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  justify-items: center;
+}
+.product {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.product:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+.product img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.product:hover img {
+  transform: scale(1.05);
+}
+.product h3 {
+  margin: 10px 0;
+}
+.price {
+  color: #e60000;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.desc {
+  font-size: 14px;
+  color: #555;
+  padding: 0 10px 10px;
+  min-height: 40px;
+}
+button {
+  background-color: #e60000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+button:hover {
+  background-color: #b30000;
+  transform: scale(1.05);
+}
+
+/* ============================= Form Sections (Login, Register, Đặt hàng, Liên hệ) ============================= */
+.form-section {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #ff4d4d, #e60000);
+  color: white;
+}
+.form-section h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+.form-box {
+  background-color: white;
+  color: #333;
+  padding: 30px 40px;
+  border-radius: 10px;
+  width: 350px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  animation: slideUp 0.6s ease-in-out;
+}
+.form-box label {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.form-box input,
+.form-box select,
+.form-box textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.form-box button {
+  width: 100%;
+  margin-top: 20px;
+  background-color: #e60000;
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+.form-box button:hover {
+  background-color: #b30000;
+  transform: scale(1.05);
+}
+.form-box p {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+.form-box a {
+  color: #e60000;
+  text-decoration: none;
+}
+.form-box a:hover {
+  text-decoration: underline;
+}
+@keyframes slideUp {
+  from {transform: translateY(40px); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
+}
+
+/* ============================= Logout Button ============================= */
+.logout {
+  background-color: white;
+  color: #e60000;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.logout:hover {
+  background-color: #ffcccc;
+  color: #b30000;
+}
+
+/* ============================= Footer ============================= */
+footer {
+  background-color: #111;
+  color: #ccc;
+  text-align: center;
+  padding: 25px 0;
+  margin-top: 30px;
+}
+footer a {
+  color: #ff3333;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ============================= Nội dung chung ============================= */
+.content {
+  padding: 40px;
+  max-width: 900px;
+  margin: auto;
+  line-height: 1.8;
+}
+.contact-info {
+  margin-top: 30px;
+  text-align: left;
+}

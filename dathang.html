@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đặt hàng - DNMoto</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a href="home.html">
+      <div class="logo">
+      <img src="images/logo.jpg" alt="DNMoto Logo">
+      <h1>DNMoto</h1>
+    </div></a>
+    <div class="user">
+      <a href="index.html" class="logout">Đăng xuất</a>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="home.html">Trang chủ</a></li>
+      <li><a href="sanpham.html" class="active">Sản phẩm</a></li>
+      <li><a href="khuyenmai.html">Khuyến mãi</a></li>
+      <li><a href="dichvu.html">Dịch vụ</a></li>
+      <li><a href="lienhe.html">Liên hệ</a></li>
+    </ul>
+  </nav>
+
+  <section class="form-section">
+    <h2>Form đặt hàng</h2>
+    <form class="form-box" action="home.html" method="get">
+
+      <label for="product">Chọn sản phẩm:</label>
+      <select id="product" name="product" required>
+        <option value="">-- Chọn sản phẩm --</option>
+        <option>Honda SH 150i – 110.000.000 VNĐ</option>
+        <option>Honda Vision 2024 – 38.000.000 VNĐ</option>
+        <option>Honda AirBlade 160 – 55.000.000 VNĐ</option>
+        <option>Yamaha Exciter 155 – 50.000.000 VNĐ</option>
+        <option>Yamaha Grande – 45.000.000 VNĐ</option>
+        <option>Honda Vario 160 – 55.000.000 VNĐ</option>
+        <option>Vespa Primavera – 76.000.000 VNĐ</option>
+        <option>Honda Winner X – 46.000.000 VNĐ</option>
+        <option>Yamaha Janus – 33.000.000 VNĐ</option>
+        <option>Honda PCX 160 – 72.000.000 VNĐ</option>
+      </select>
+
+      <label for="fullname">Họ và tên:</label>
+      <input type="text" id="fullname" name="fullname" placeholder="Nhập họ và tên của bạn" required>
+
+      <label for="phone">Số điện thoại:</label>
+      <input type="tel" id="phone" name="phone" placeholder="Nhập số điện thoại" required>
+
+      <label for="address">Địa chỉ nhận hàng:</label>
+      <input type="text" id="address" name="address" placeholder="Nhập địa chỉ nhận hàng" required>
+
+      <label for="payment">Phương thức thanh toán:</label>
+      <select id="payment" name="payment" required>
+        <option value="">-- Chọn phương thức --</option>
+        <option>Thanh toán khi nhận hàng (COD)</option>
+        <option>Chuyển khoản ngân hàng</option>
+        <option>Ví điện tử (Momo, ZaloPay,...)</option>
+      </select>
+
+      <button type="submit">Gửi đơn hàng</button>
+      <p><a href="sanpham.html">⬅ Quay lại danh sách sản phẩm</a></p>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 DNMoto - Cửa hàng xe máy Hoàng Tùng chính hãng.</p>
+    <p>Hotline: 0988 123 456 | Email: lienhe@dnmoto.vn</p>
+  </footer>
+</body>
+</html>

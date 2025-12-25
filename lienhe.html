@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liên hệ - DNMoto</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a href="home.html">
+      <div class="logo">
+      <img src="images/logo.jpg" alt="DNMoto Logo">
+      <h1>DNMoto</h1>
+    </div></a>
+    <div class="user">
+      <a href="index.html" class="logout">Đăng xuất</a>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="home.html">Trang chủ</a></li>
+      <li><a href="sanpham.html">Sản phẩm</a></li>
+      <li><a href="khuyenmai.html">Khuyến mãi</a></li>
+      <li><a href="dichvu.html">Dịch vụ</a></li>
+      <li><a href="lienhe.html" class="active">Liên hệ</a></li>
+    </ul>
+  </nav>
+
+  <section class="form-section">
+    <h2>Liên hệ với chúng tôi</h2>
+    <form class="form-box" action="home.html" method="get">
+      <label for="name">Họ và tên:</label>
+      <input type="text" id="name" name="name" placeholder="Nhập họ tên của bạn" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Nhập email của bạn" required>
+
+      <label for="message">Nội dung liên hệ:</label>
+      <textarea id="message" name="message" rows="5" placeholder="Nhập nội dung..." required></textarea>
+
+      <button type="submit">Gửi liên hệ</button>
+    </form>
+
+    <div class="contact-info">
+      <h3>Thông tin liên hệ</h3>
+      <p>Địa chỉ: 123 Trần Hưng Đạo, Quận 1, TP. Hồ Chí Minh</p>
+      <p>Hotline: 0988 123 456</p>
+      <p>Email: lienhe@dnmoto.vn</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 DNMoto - Cửa hàng xe máy Hoàng Tùng chính hãng.</p>
+    <p>Hotline: 0988 123 456 | Email: lienhe@dnmoto.vn</p>
+  </footer>
+</body>
+</html>
